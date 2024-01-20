@@ -73,6 +73,7 @@ with gr.Blocks(css="style.css", title="Text To Speech") as demo:
             example = gr.Audio(label="Exemple",
                               value="example/fr-FR-VivienneMultilingualNeural.mp3",
                               interactive=False,
+                              autoplay=True,
                               elem_classes="example")
 
             voices.change(fn=changeVoice,inputs=voices,outputs=example)
@@ -91,7 +92,7 @@ with gr.Blocks(css="style.css", title="Text To Speech") as demo:
                                label="Volume",
                                info="Augmenter ou baisser le volume audio",
                                interactive=True)
-            audio = gr.Audio(label="Sortie",
+            audio = gr.Audio(label="Rendu audio",
                              interactive=False,
                              elem_classes="audio")
             clear = gr.Button("Effacer", elem_id="clear-btn")
