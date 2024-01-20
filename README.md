@@ -20,5 +20,5 @@ Python et pip doivent être installés.
 
 Le navigateur s'ouvre automatiquement sur la page
 ```
-localhost:7860
+http://localhost:7860
 ```
