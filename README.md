@@ -12,15 +12,13 @@ Python et pip doivent être installés.
     pip install gradio
     pip install asyncio
 
-## Lancement
+## Utilisation
 
     python app.py
     ou
     lancer Edge-TTS-WebUI.bat
 
-## Utilisation
-
-Ouvrez votre navigateur web sur la page
+Le navigateur s'ouvre automatiquement sur la page
 ```
 localhost:7860
 ```
