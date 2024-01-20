@@ -2,6 +2,7 @@ import gradio as gr
 import edge_tts
 import asyncio
 import os
+import webbrowser
 # https://speech.platform.bing.com/consumer/speech/synthesize/readaloud/voices/list?trustedclienttoken=6A5AA1D4EAFF4E9FB37E23D68491D6F4
 SUPPORTED_VOICES = {
     'Vivienne': 'fr-FR-VivienneMultilingualNeural',
@@ -100,6 +101,8 @@ with gr.Blocks(css="style.css", title="Text To Speech") as demo:
                       inputs=[text, voices, rate, volume],
                       outputs=[audio])
             clear.click(fn=clearSpeech, outputs=[text, audio])
-
+            
+#Lance le navigateur web par défaut
+webbrowser.open('http://localhost:7860')
 if __name__ == "__main__":
     demo.launch()
